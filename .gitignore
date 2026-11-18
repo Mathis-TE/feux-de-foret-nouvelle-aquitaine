@@ -1,0 +1,6 @@
+# Secrets (clés d API) : jamais dans Git
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+__pycache__/
