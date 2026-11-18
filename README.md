@@ -1,5 +1,8 @@
 # feux-de-foret-nouvelle-aquitaine
-
+## Étudiants
+Ahmed ABBADI<br>
+Amine ASBANE<br>
+Mathis TE<br>
 ## Bases de Git / GitHub
 
 ### Git vs GitHub
