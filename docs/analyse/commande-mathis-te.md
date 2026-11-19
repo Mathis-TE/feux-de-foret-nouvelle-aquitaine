@@ -54,7 +54,7 @@ Pour chaque question, la donnée qu'il vous faudrait idéalement pour répondre.
 
 | Question | Donnée idéale | Grain (une ligne = ?) | Période | Fraîcheur | Emprise géographique |
 |---|---|---|---|---|---|
-| 1 | Feux de forêt avec commune (code INSEE), date et heure de première alerte, surface brûlée et cause (BDIFF), rapportés à la surface forestière de chaque commune (BD Forêt IGN) | Un feu | 2006-2026 | Annuelle (saison validée) | Gironde, à la commune |
+| 1 | Feux de forêt avec commune (code INSEE), date et heure de première alerte, surface brûlée et cause (BDIFF), rapportés à la surface forestière de chaque commune (BD Forêt IGN) | Un feu + une commune | 2006-2026 | Annuelle (saison validée) | Gironde, à la commune |
 | 2 | Niveau de danger Météo des forêts de chaque jour croisé avec le nombre de feux du même jour (archives Météo des forêts + BDIFF), idéalement complété par l'IFM brut | Un jour × un département | Saisons 2023-2026 (plus long avec l'IFM, dont 2022) | Quotidienne | Gironde |
 | 3 | Même croisement niveau de danger × nombre de feux que la question 2 | Un jour × un département | Saisons 2023-2026 | Quotidienne | Les 12 départements de Nouvelle-Aquitaine |
-| 4 | Nombre de feux et surface brûlée par département et par an (BDIFF), et nombre de jours à danger élevé ou très élevé (archives Météo des forêts) | Un département × une année | 2023-2026 pour l'indice, 2006-2026 pour les feux | Annuelle | France (Hexagone + Corse) |
+| 4 | Nombre de feux par surface forestière et taux de jours avec feu | Un jour × Un département   | 2023-2026 pour l'indice, 2006-2026 pour les feux | Annuelle | France (Hexagone + Corse) |
