@@ -44,3 +44,9 @@ docs/rendus/Rendu Datavisualisation décisionnelle.md
 - Ne jamais push sans avoir résolu les conflits de merge
 - Ne jamais travailler directement dans la branche main
 - Toujours faire un `git pull origin main` pour avoir la dernière version de la main
+
+## Base SQLite
+
+Construire la base à partir des CSV du dépôt avec `python pipeline/construire_base.py`.
+Le [guide de la base](docs/entrepot/05-base-sqlite.md) décrit son contenu, les contrôles et les limites de comparaison entre incendies et danger météo.
+Les requêtes de départ sont dans [sql/requetes_analyse.sql](sql/requetes_analyse.sql).
