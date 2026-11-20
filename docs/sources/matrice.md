@@ -1,0 +1,96 @@
+# Matrice de confrontation des questions et des sources
+
+**Statut : v0 PROPOSÉE — à relire et à arbitrer en groupe.**  
+**Préparation :** Ahmed ABBADI, mise en commun documentaire du 20 novembre 2026.  
+**Objet :** confronter les questions des trois analyses à l'inventaire existant, sans calculer un seuil ni présumer une validation collective.
+
+Cette version conserve les formulations et les attributions des analyses individuelles. Les identifiants G01 à G09 sont des regroupements proposés. Les références D01 à D10 renvoient au [journal des décisions](../journal-des-decisions.md) : ce sont des points à instruire, pas des décisions déjà prises.
+
+## 1. Provenance des questions proposées
+
+Les identifiants MT-Q1 à MT-Q4, AA-Q1 à AA-Q5 et AS-Q1 à AS-Q3 suivent **l'ordre des questions analytiques** des auteurs, et non leurs questions de cadrage ou les lignes de leurs tableaux de données.
+
+| ID d'origine | Auteur et document | Libellé analytique conservé |
+| --- | --- | --- |
+| MT-Q1 | Mathis TE, [analyse](../analyse/commande-mathis-te.md) | Quelles communes de Gironde concentrent le plus de départs de feu et le plus de surface brûlée, et à quelles périodes (mois, heures) ? |
+| MT-Q2 | Mathis TE, [analyse](../analyse/commande-mathis-te.md) | Pour chaque niveau de la Météo des forêts, quelle part des jours a connu au moins un départ de feu en Gironde, et combien de feux sont partis des jours classés « faible » ou « modéré » ? |
+| MT-Q3 | Mathis TE, [analyse](../analyse/commande-mathis-te.md) | Un même niveau de danger correspond-il au même nombre de feux en Gironde que dans les autres départements de Nouvelle-Aquitaine (Landes, Lot-et-Garonne, Dordogne…) ? |
+| MT-Q4 | Mathis TE, [analyse](../analyse/commande-mathis-te.md) | Comment se situe la Gironde par rapport aux autres départements français, en nombre de feux et en surface brûlée par jour de danger élevé ? |
+| AA-Q1 | Ahmed ABBADI, [analyse](../analyse/commande-ahmed-abbadi.md) | Dans quelles zones de Gironde y a-t-il le plus de départs de feu ? |
+| AA-Q2 | Ahmed ABBADI, [analyse](../analyse/commande-ahmed-abbadi.md) | À quelles périodes les départs de feu sont-ils les plus fréquents ? |
+| AA-Q3 | Ahmed ABBADI, [analyse](../analyse/commande-ahmed-abbadi.md) | Les jours où le danger annoncé est élevé présentent-ils davantage de feux ? |
+| AA-Q4 | Ahmed ABBADI, [analyse](../analyse/commande-ahmed-abbadi.md) | Selon le seuil choisi, combien de jours faudrait-il renforcer et combien de feux surviendraient sous ce seuil ? |
+| AA-Q5 | Ahmed ABBADI, [analyse](../analyse/commande-ahmed-abbadi.md) | Observe-t-on la même relation entre danger annoncé et feux dans les autres départements de la région et en France ? |
+| AS-Q1 | Amine ASBANE, [analyse](../analyse/commande-Amine%20ASBANE.md) | Le changement climatique augmente-t-il la fréquence et l’intensité des incendies ? |
+| AS-Q2 | Amine ASBANE, [analyse](../analyse/commande-Amine%20ASBANE.md) | Comment peut-on utiliser les données des incendies passés pour prédire les zones à risque dans le futur ? |
+| AS-Q3 | Amine ASBANE, [analyse](../analyse/commande-Amine%20ASBANE.md) | Comment l’intelligence artificielle pourrait-elle améliorer la précision de la prévision des incendies ? |
+
+| ID proposé | Question regroupée v0 | Origines, transformation et point du journal |
+| --- | --- | --- |
+| G01 | Quelles zones de Gironde concentrent durablement les départs de feu et les surfaces brûlées, compte tenu des surfaces forestières et du contexte territorial ? | AA-Q1 + partie spatiale de MT-Q1 + diagnostic préalable d'AS-Q2. Décomposer MT-Q1 entre G01 et G02 ; ne pas assimiler concentration historique et prévision. D01, D06. |
+| G02 | À quels mois, jours et créneaux horaires les départs se concentrent-ils en Gironde, et les profils se répètent-ils selon les saisons ? | AA-Q2 + partie temporelle de MT-Q1. La répétition interannuelle est une précision proposée ; l'heure disponible est celle de l'alerte. D02, D06. |
+| G03 | Pour chaque niveau annoncé de la Météo des forêts, quelle proportion des journées connaît un feu, combien de feux surviennent par jour et quelle part survient aux niveaux faible ou modéré ? | MT-Q2 + AA-Q3. Fixer une échéance et conserver les journées sans feu uniquement si leur couverture est établie. D03, D06, D09. |
+| G04 | Pour chaque seuil candidat, combien de journées seraient renforcées et quelle proportion des départs et des surfaces parcourues observés se situe sous ce seuil ? | AA-Q4 + scénario de décision de MT-Q2. Les surfaces sont un complément proposé ; la faisabilité budgétaire est isolée en G07. D03, D04, D06. |
+| G05 | À niveau annoncé et période comparables, le lien entre danger et événements diffère-t-il entre la Gironde et les autres départements de Nouvelle-Aquitaine ? | MT-Q3 + partie régionale d'AA-Q5. Remplacer les seuls nombres bruts par des fréquences avec dénominateurs explicites ; les voisins cités ne limitent pas la région. D05, D06, D09. |
+| G06 | Comment la Gironde se situe-t-elle par rapport au territoire national couvert par l'indicateur et à des départements de contexte comparable, en fréquence des feux et surfaces parcourues selon le danger annoncé ? | MT-Q4 + partie nationale d'AA-Q5. Distinguer panorama national et comparaison de territoires proches ; aucun classement ne décide à lui seul du budget. D05, D06, D09. |
+| G07 | Quels scénarios de renforcement pour 2027 sont compatibles avec le budget, les effectifs et le matériel disponibles, et peuvent-ils être ciblés par secteur et créneau ? | Décomposition proposée d'AA-Q4, de son tableau de données « Quel seuil est compatible avec les moyens disponibles ? », et des besoins de Mathis sur coût et sectorisation. Ce n'est pas une question analytique supplémentaire déjà validée par le groupe. D04, D06. |
+| G08 | L'ajout de variables territoriales et météorologiques, éventuellement dans un modèle d'IA, améliore-t-il suffisamment les décisions de renforcement par rapport à une règle simple fondée sur le danger annoncé ? | AS-Q3 + variables et objectif prédictif d'AS-Q2. **Extension méthodologique à arbitrer**, avec référence simple et test sur une période séparée. Prévision n'est pas détection sur images. D07, D09, D10. |
+| G09 | Sur une période longue, quelles évolutions observe-t-on dans les feux et les conditions climatiques, et quelles limites empêchent d'attribuer ces évolutions au climat ? | AS-Q1, reformulée pour distinguer description et causalité. **Extension de contexte à arbitrer** ; les séries actuelles ne prouvent pas une attribution climatique ni une prévision de 2027. D08, D06. |
+
+G08 et G09 conservent les propositions d'Amine. Leur présence ne constitue pas un élargissement adopté de la commande SDIS 33 ; elles n'ont pas été ajoutées pour donner artificiellement une utilité à une source disponible.
+
+## 2. Périmètre documentaire et preuves disponibles
+
+L'[inventaire](inventaire.md) comporte quatre sources. La confrontation distingue le **potentiel décrit dans les fiches**, les **fichiers réellement présents** et les **résultats encore à produire**. Le [contrôle local du 20 novembre 2026](verification/confrontation-exercice-3-2026-11-20.json) fournit les constats ci-dessous ; il n'évalue pas les performances du seuil.
+
+| Source et fiches | Fichiers locaux contrôlés | Ce qui limite la réponse |
+| --- | --- | --- |
+| BDIFF — [fiche partagée](fiche-bdiff.md), [contrôle Ahmed](fiche-bdiff-ahmed-abbadi.md) | `data/incendies.csv` : 52 811 fiches, 24 colonnes, alertes 2006–2025 ; 3 555 fiches girondines. L'autre fichier `data/incendies/Incendies.csv` contient 2 541 fiches de 2025 et n'est pas le même extrait que les 158 fiches Gironde 2024–2025 contrôlées dans l'exercice 2. | Commune et date de première alerte, sans point d'éclosion ni surface forestière totale communale. Pas de 2026. Complétude des campagnes et sens des cases vides à confirmer ; nomenclatures de surfaces variables. |
+| Météo des forêts — [fiche partagée](fiche-meteo-des-forets.md), [contrôle Ahmed](fiche-meteo-des-forets-ahmed-abbadi.md) | `data/meteo_foret_na.csv` : 4 452 lignes, **6 colonnes**, 12 départements, 2024–2026 ; `date`, `num_dep`, `niveau_j1`, `niveau_j2`, `nom_dep`, `dep_nom`. | Sens exact de `date` à confirmer avant tout décalage J+1/J+2 ; les deux colonnes de nom ne sont pas remplies aux mêmes années. Les archives nationales ont été vérifiées dans l'exercice 2 (96 départements), mais `data/meteo_foret_france.csv` et les archives brutes sont **absents de ce dépôt**. |
+| API Géo — [fiche Amine](fiche-geo-api-gouv.md) | `data/communes_na.csv` : 4 293 communes, 7 colonnes, dont 534 communes girondines ; `code_insee`, `commune`, `departement`, `lat`, `lon`, `surface_ha`, `population`. | Référentiel courant, sans historique certifié des millésimes dans ce CSV. `surface_ha` est une surface communale, pas forestière ; les coordonnées localisent le centre communal, pas un départ de feu. |
+| Open-Meteo — [fiche Amine](fiche-open-meteo.md) | `data/meteo_quotidienne/33.csv` : 7 305 jours, **10 colonnes**, 2006–2025 ; températures, précipitations, vent, humidité, évapotranspiration et humidité du sol. | La fiche décrit une extraction ponctuelle près de Bordeaux et un modèle par défaut `best match`. Le CSV 33 contrôlé ne contient ni coordonnées du point ni modèle : provenance de ces paramètres à retrouver. Ce n'est pas une prévision archivée avant décision ni un réseau de mesures locales. |
+
+La différence des volumes ci-dessus avec certaines fiches correspond à des **extractions et étapes de préparation différentes**. Les fiches individuelles sont conservées comme traces ; elles ne remplacent pas le contrôle du fichier effectivement utilisé. Les divergences à trancher sont consignées en D09.
+
+## 3. Matrice questions × sources
+
+**Lecture des degrés :** `complet` signifie que la source fournit à elle seule les informations et la couverture nécessaires à la question ; `partiel` signifie un apport substantiel mais insuffisant ; `absent` signifie aucune variable qui réponde à cette question dans le périmètre contrôlé ; `inconnu` signifie que cet apport n'a pas pu être établi. Une simple clé de jointure ne suffit pas à attribuer `partiel`. Aucun degré `complet` n'est justifié ici.
+
+Références des cellules : **[B-clés]** renvoie aux rubriques « Grain », « Période » et « Clés disponibles » de la fiche BDIFF ; **[M-clés]** aux rubriques « Grain », « Période » et « Clés disponibles » du contrôle météo ; **[G-grain]** à la rubrique « Grain » de la fiche API Géo ; **[O-vars]** à « Variables disponibles (daily) » et « Grain » de la fiche Open-Meteo. Les colonnes et disponibilités du fichier effectivement utilisé sont également détaillées dans le contrôle local cité ci-dessus.
+
+| Question | BDIFF | Météo des forêts | API Géo | Open-Meteo |
+| --- | --- | --- | --- | --- |
+| G01 — Zones prioritaires | **partiel** — commune, alertes et surfaces parcourues disponibles ; dénominateur forestier local, point précis et campagne 2026 absents ([B-clés]). | **absent** — niveau départemental, sans information discriminant les zones à l'intérieur de la Gironde ([M-clés]). | **partiel** — population et surface communales apportent du contexte ; ni forêt, enjeux fins ni point de départ ([G-grain]). | **absent** — les variables d'un point journalier ne localisent pas les concentrations de feux ni la végétation ([O-vars]). |
+| G02 — Périodes prioritaires | **partiel** — historique horodaté exploitable, mais première alerte ≠ éclosion et couverture 2026 absente ([B-clés]). | **absent** — calendrier d'annonces, sans horaires ou fréquence observée des départs ([M-clés]). | **absent** — référentiel spatial, sans temporalité des feux ([G-grain]). | **absent** — conditions météo quotidiennes, sans calendrier observé des départs ni heure d'éclosion ([O-vars]). |
+| G03 — Lien niveau–feux | **partiel** — fournit les événements 2024–2025, mais pas le danger annoncé ; zéros quotidiens et complétude à établir ([B-clés]). | **partiel** — fournit les niveaux, mais pas les feux ; sens de `date`, échéance et alignement à valider ([M-clés]). | **absent** — une clé territoriale seule ne renseigne ni fréquence des feux ni danger annoncé ([G-grain]). | **absent** — réanalyse météo distincte des niveaux annoncés ; ne mesure pas seule leur performance ([O-vars]). |
+| G04 — Seuils et journées couvertes | **partiel** — événements et surfaces sous chaque seuil après jointure ; aucun niveau, coût ou effet évité directement mesuré ([B-clés]). | **partiel** — permet de compter des jours par seuil après clarification du temps ; ni événements, ni coûts, ni effet causal du renforcement ([M-clés]). | **absent** — ne fournit ni seuil, mobilisation, coût ou événement ; l'identifiant communal ne suffit pas ([G-grain]). | **absent** — aucune annonce MdF ou mobilisation ; une réanalyse ne reconstitue pas une décision passée ([O-vars]). |
+| G05 — Comparaison régionale | **partiel** — événements régionaux présents ; définitions, complétude, années communes et dénominateurs à harmoniser ([B-clés]). | **partiel** — 12 départements présents ; pas d'événements et appariement temporel encore à valider ([M-clés]). | **absent** — les identifiants et populations seuls ne mesurent pas la relation niveau–feux ; pas de surface forestière ([G-grain]). | **absent** — ne documente pas directement la relation aux annonces MdF dans la région ; les contextes météo ne suffisent pas ([O-vars]). |
+| G06 — Comparaison nationale | **partiel** — export national disponible, mais comparabilité et contexte à contrôler ; pas d'annonces ni de 2026 ([B-clés]). | **partiel** — archives nationales vérifiées dans l'exercice 2, mais fichier national absent du dépôt ; acquisition reproductible et jointure à refaire ([M-clés]). | **absent** — extrait régional uniquement ; aucune mesure de la relation niveau–feux à l'échelle nationale ([G-grain]). | **absent** — contrôle limité au fichier 33 ; ni niveaux MdF nationaux ni performances comparées ([O-vars]). |
+| G07 — Faisabilité des moyens 2027 | **absent** — aucune disponibilité d'équipe, durée d'engagement, grille de coût ou budget 2027 ([B-clés]). | **absent** — le niveau de danger ne décrit pas les moyens mobilisables ni leur coût ([M-clés]). | **absent** — communes et population ne décrivent pas centres, équipes, véhicules ou coûts ([G-grain]). | **absent** — conditions météo sans capacités, coûts ou contraintes de mobilisation ([O-vars]). |
+| G08 — Apport d'un modèle prédictif | **partiel** — cibles d'apprentissage et surfaces disponibles ; pas de validation prédictive ni de localisation à la maille demandée ([B-clés]). | **partiel** — prédicteur et règle de référence possibles après clarification des temps ; aucun gain validé, archive courte ([M-clés]). | **partiel** — population et caractéristiques communales sont des entrées territoriales possibles, au-delà des seules clés ; variables statiques, sans forêt ni modèle évalué ([G-grain]). | **partiel** — entrées météo historiques possibles ; point et modèle à retracer, absence de prévision réellement disponible à l'heure de décision ([O-vars]). |
+| G09 — Évolution et climat | **partiel** — historique de feux et surfaces 2006–2025, avec changements de déclaration possibles ; ni attribution climatique ni intensité physique ([B-clés]). | **absent** — niveaux saisonniers 2024–2026 trop courts et produit distinct d'une série climatique homogène ([M-clés]). | **absent** — état communal courant, sans série climatique ou historique d'incendies ([G-grain]). | **partiel** — météo passée 2006–2025 utile à une description ; homogénéité du modèle et représentativité à établir, sans preuve de causalité ni projection 2027 ([O-vars]). |
+
+**2026 n'est pas une divergence inventée entre auteurs.** Mathis demande explicitement 2006–2026 pour G01 ; Ahmed demande plusieurs étés récents « dont 2026 si disponible ». Pour une question regroupée identique, une seule qualification est conservée : BDIFF apporte une réponse partielle avec son historique arrêté à 2025. Le caractère obligatoire ou optionnel de 2026 reste à arbitrer en D06 et ne doit pas transformer cette lacune en zéro feu.
+
+## 4. Lecture dans les deux sens
+
+**Des questions vers les sources.** G01 et G02 peuvent commencer par une description des feux enregistrés, sans classement définitif des investissements. G03 à G06 nécessitent un appariement contrôlé BDIFF–MdF ; les deux sources ne sont pas chacune une réponse complète. G07 n'a aucun apport dans les quatre sources : disponibilité des équipes et véhicules, contenu du renforcement, coûts marginaux et budget 2027 restent à demander. Pour G08 et G09, il existe des entrées d'analyse, pas de modèle validé ni d'attribution démontrée.
+
+**Des sources vers les questions.** Dans une matrice limitée aux cinq questions analytiques d'Ahmed, API Géo et Open-Meteo n'apportent pas de réponse directe au seuil et aux performances de l'indice. API Géo reste partielle pour G01 uniquement grâce à son contexte substantiel de population et de surface, pas grâce à son code de jointure. Les variables territoriales de l'API Géo et la météo historique d'Open-Meteo trouvent surtout leur place dans les questions prédictives d'Amine (G08) ; Open-Meteo peut aussi alimenter son étude de contexte climatique (G09). Cette lecture justifie leur utilité éventuelle sans présumer l'adoption de ces extensions.
+
+**Conséquences sur le périmètre.** Des détections satellitaires NASA/FIRMS ne figurent pas dans les quatre sources inventoriées et aucun dossier `data/firms` n'est présent selon le contrôle. Elles ne sont pas ajoutées pour transformer la commande en détection sur images. Les comptes OFGL/SIS peuvent fournir un contexte hors inventaire, mais ne remplacent ni les journaux de renforcement ni les coûts marginaux demandés en G07. Voir D10 avant d'ajouter ou d'écarter une nouvelle source.
+
+## 5. Conditions préalables à toute conclusion
+
+- Confirmer le périmètre des feux enregistrés et leur complétude ; conserver séparément zéro confirmé, valeur manquante et campagne absente (D02, D03, D06).
+- Fixer le sens de `date`, le fuseau, la date cible et une échéance identique avant la jointure ; ne pas prendre une information connue après le feu pour une prévision opérationnelle (D03, D09).
+- Conserver la Météo des forêts, l'IFM technique et les éventuelles restrictions préfectorales comme des informations distinctes ; aucune équivalence n'est validée dans cette matrice (D09).
+- Comparer à périodes, unités et emprises communes ; afficher les effectifs des jours par niveau et la fragilité des petits nombres (D05, D06).
+- Traiter une journée de danger élevé sans feu comme une observation, pas comme la preuve d'une prévision erronée ou d'une patrouille inutile. Les mesures de prévention peuvent modifier ce qui est observé (D03, D04).
+- Ne pas appeler « intensité » une surface parcourue ; ne pas déduire d'une association météo–feux une causalité climatique ou un nombre de feux évités (D08).
+- Faire relire les regroupements, les degrés et les besoins non couverts par le groupe avant toute adoption. Les neuf questions restent proposées.
+
+[B-clés]: fiche-bdiff.md
+[M-clés]: fiche-meteo-des-forets-ahmed-abbadi.md
+[G-grain]: fiche-geo-api-gouv.md
+[O-vars]: fiche-open-meteo.md
